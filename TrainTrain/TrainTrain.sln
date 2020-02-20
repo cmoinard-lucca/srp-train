@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTrain.Anemic", "TrainTrain.Anemic\TrainTrain.Anemic.csproj", "{5B8FFB8A-997D-46D3-8B77-66E0557BC93C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainTrain.Anemic.Tests", "TrainTrain.Anemic.Tests\TrainTrain.Anemic.Tests.csproj", "{0897787B-1BD0-4BBF-956D-373432351287}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B8FFB8A-997D-46D3-8B77-66E0557BC93C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8FFB8A-997D-46D3-8B77-66E0557BC93C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B8FFB8A-997D-46D3-8B77-66E0557BC93C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B8FFB8A-997D-46D3-8B77-66E0557BC93C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0897787B-1BD0-4BBF-956D-373432351287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0897787B-1BD0-4BBF-956D-373432351287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0897787B-1BD0-4BBF-956D-373432351287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0897787B-1BD0-4BBF-956D-373432351287}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
