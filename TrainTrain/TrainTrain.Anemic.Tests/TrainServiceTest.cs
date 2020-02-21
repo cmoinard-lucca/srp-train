@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TrainTrain.Anemic.Marchandises;
 using Xunit;
 
 namespace TrainTrain.Anemic.Tests
@@ -28,7 +29,7 @@ namespace TrainTrain.Anemic.Tests
                 };
 
             Assert.Throws<InvalidOperationException>(
-                () => _trainService.ChargerMarchandise<Ciment>(train, 10));
+                () => _trainService.ChargerMarchandise(new Ciment(), train, 10));
         }
         
         [Fact]
@@ -36,7 +37,7 @@ namespace TrainTrain.Anemic.Tests
         {
             var train = CréerTrain();
 
-            _trainService.ChargerMarchandise<Avoine>(train, 0);
+            _trainService.ChargerMarchandise(new Avoine(), train, 0);
 
             var wagonAvoine = train.Wagons.OfType<Wagon<Avoine>>().First();
             Assert.Equal(20, wagonAvoine.VolumeUtilisé);
@@ -47,7 +48,7 @@ namespace TrainTrain.Anemic.Tests
         {
             var train = CréerTrain();
 
-            _trainService.ChargerMarchandise<Avoine>(train, 10);
+            _trainService.ChargerMarchandise(new Avoine(), train, 10);
 
             var wagonAvoine = train.Wagons.OfType<Wagon<Avoine>>().First();
             Assert.Equal(30, wagonAvoine.VolumeUtilisé);
@@ -77,7 +78,7 @@ namespace TrainTrain.Anemic.Tests
                     }
                 };
 
-            _trainService.ChargerMarchandise<Avoine>(train, 100);
+            _trainService.ChargerMarchandise(new Avoine(), train, 100);
 
             var wagon1 = train.Wagons.OfType<Wagon<Avoine>>().First();
             Assert.Equal(100, wagon1.VolumeUtilisé);
@@ -111,7 +112,7 @@ namespace TrainTrain.Anemic.Tests
                 };
 
             Assert.Throws<InvalidOperationException>(() =>
-                _trainService.ChargerMarchandise<Avoine>(train, 1000));
+                _trainService.ChargerMarchandise(new Avoine(), train, 1000));
         }
 
         
@@ -140,7 +141,7 @@ namespace TrainTrain.Anemic.Tests
                 };
 
             Assert.Throws<InvalidOperationException>(() =>
-                _trainService.ChargerMarchandise<Avoine>(train, 160));
+                _trainService.ChargerMarchandise(new Avoine(), train, 160));
         }
 
         private static Train CréerTrain() =>

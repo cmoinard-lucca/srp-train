@@ -1,3 +1,5 @@
+using TrainTrain.Anemic.Marchandises;
+
 namespace TrainTrain.Anemic
 {
     public abstract class Wagon
@@ -8,7 +10,7 @@ namespace TrainTrain.Anemic
     }
     
     public class Wagon<T> : Wagon
-        where T : Marchandise2
+        where T : Marchandise
     {
     }
 }

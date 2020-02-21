@@ -1,11 +1,12 @@
 using System;
 using System.Linq;
+using TrainTrain.Anemic.Marchandises;
 
 namespace TrainTrain.Anemic
 {
     public class TrainService
     {
-        public void ChargerMarchandise<T>(Train train, double volume) where  T : Marchandise2
+        public void ChargerMarchandise<T>(T marchandise, Train train, double volume) where  T : Marchandise
         {
             if (Math.Abs(volume) < 0.000001)
             {
@@ -29,7 +30,6 @@ namespace TrainTrain.Anemic
                 throw new InvalidOperationException($"Pas assez de wagons de {typeof(T)}");
             }
 
-            var marchandise = Activator.CreateInstance<T>();
             var poidsTotal =
                 train.Wagons.Sum(w => w.PoidsÀVide) +
                 (train.Wagons.Sum(w => w.VolumeUtilisé) + volume ) * marchandise.PoidsEnKgParM3 / 1000;
